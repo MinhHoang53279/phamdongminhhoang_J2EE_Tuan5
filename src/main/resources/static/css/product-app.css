@@ -1,0 +1,164 @@
+:root {
+    --surface: #ffffff;
+    --surface-soft: #f6f8fb;
+    --text-main: #1b2a38;
+    --text-soft: #5a6a78;
+    --brand: #e95a2b;
+    --brand-soft: #fce7df;
+    --line: #e4e9ef;
+    --nav: #101826;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body.app-body {
+    margin: 0;
+    font-family: "Be Vietnam Pro", sans-serif;
+    color: var(--text-main);
+    background: radial-gradient(circle at 5% 10%, #ffe9de 0, transparent 35%),
+        radial-gradient(circle at 95% 90%, #dfefff 0, transparent 35%),
+        linear-gradient(135deg, #f3f7fb 0%, #eef3f9 55%, #f8f4ef 100%);
+    min-height: 100vh;
+}
+
+.page-shell {
+    width: min(1600px, 97vw);
+    margin: 22px auto;
+}
+
+.title-block {
+    margin-bottom: 14px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.title-block h1 {
+    margin: 0;
+    font-size: clamp(1.3rem, 2vw, 2.3rem);
+    font-weight: 800;
+    color: var(--brand);
+    letter-spacing: 0.02em;
+}
+
+.title-line {
+    display: block;
+    margin: 10px auto 0;
+    width: min(96%, 1120px);
+    border-top: 4px solid #f3a049;
+}
+
+.app-navbar {
+    background: var(--nav);
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 10px 22px -18px rgba(16, 24, 38, 0.9);
+}
+
+.app-navbar .navbar-brand,
+.app-navbar .nav-link {
+    color: #ffffff;
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+}
+
+.app-navbar .nav-link:hover,
+.app-navbar .nav-link.active {
+    color: #8fd3ff;
+}
+
+.content-panel {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    padding: 1.1rem;
+    box-shadow: 0 14px 28px -24px rgba(22, 29, 37, 0.8);
+}
+
+.panel-title {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #152334;
+}
+
+.table.app-table thead th {
+    background: var(--surface-soft);
+    color: #2a3a4b;
+    border-bottom: 1px solid #dce3eb;
+    font-size: 0.9rem;
+}
+
+.table.app-table tbody td {
+    vertical-align: middle;
+    border-color: #ecf1f6;
+}
+
+.product-thumb {
+    width: 80px;
+    height: 58px;
+    object-fit: cover;
+    border: 1px solid #dbe3ec;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.form-wrap {
+    max-width: none;
+}
+
+.product-form-vertical {
+    width: 100%;
+    max-width: none;
+}
+
+.product-form-vertical .form-control:not([type="file"]),
+.product-form-vertical .form-select {
+    width: 100%;
+    min-height: 46px;
+}
+
+.product-form-vertical .form-control[type="file"] {
+    width: 100%;
+    min-height: 46px;
+    padding: 0;
+}
+
+.product-form-vertical .form-control[type="file"]::file-selector-button {
+    height: 44px;
+    margin: 0 12px 0 0;
+    padding: 0 0.95rem;
+    border: 0;
+    border-right: 1px solid #c7d0da;
+    background-color: #f4f7fb;
+    color: #182a3d;
+}
+
+.field-warning {
+    margin-top: 6px;
+    background: #fff1c9;
+    color: #6a5100;
+    border: 1px solid #f0d67d;
+    border-radius: 4px;
+    padding: 0.35rem 0.55rem;
+    font-size: 0.86rem;
+}
+
+.current-label {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: var(--text-soft);
+    margin-bottom: 6px;
+}
+
+@media (max-width: 768px) {
+    .page-shell {
+        width: 96vw;
+        margin: 14px auto;
+    }
+
+    .content-panel {
+        padding: 0.9rem;
+    }
+}

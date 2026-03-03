@@ -9,9 +9,9 @@ import com.example.demo.model.Student;
 @Controller
 public class HomeController {
 
-    @GetMapping("/home")
+    @GetMapping({"/", "/home"})
     public String home() {
-        return "home";
+        return "redirect:/products";
     }
 
     @GetMapping("/demo")
