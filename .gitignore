@@ -34,3 +34,7 @@ build/
 
 # Runtime uploads
 uploads/
+
+# Sensitive config (DB credentials)
+src/main/resources/application.properties
+docker-compose.yml

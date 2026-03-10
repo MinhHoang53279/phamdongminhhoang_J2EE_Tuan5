@@ -16,7 +16,7 @@ public class HomeController {
 
     @GetMapping("/demo")
     public String demoPage(Model model) {
-        Student student = new Student(1, "Nguyễn Văn A");
+        Student student = new Student(1L, "Nguyễn Văn A");
         model.addAttribute("student", student);
         model.addAttribute("message", "Welcome Thymeleaf!");
         return "demo";
